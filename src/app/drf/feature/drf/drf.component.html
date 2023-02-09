@@ -1,0 +1,10 @@
+<app-header></app-header>
+<div class="bg-pattern"></div>
+<section class="drf" ngSwipe (swipeEnd)="onSwipeEnd($event)">
+  <img class="image" [src]="images[selectedIndex]" *ngIf="selectedIndex < 3">
+  <div class="model" [class.model--hidden]="selectedIndex != 3">
+      <app-robot [modelUrl]="model"></app-robot>
+  </div>
+  <div class="drf__description" [innerHTML]="description[selectedIndex]"></div>
+  <app-timeline [(selectedIndex)]="selectedIndex"></app-timeline>
+</section>

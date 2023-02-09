@@ -1,0 +1,117 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 5rem;
+    padding-bottom: 0;
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    margin-top: 4.2rem;
+    font-size: 8rem;
+    z-index: 2;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: bold;
+    background: linear-gradient(
+        to right,
+        teal,
+        rgb(24, 90, 189),
+        teal
+    );
+    background-size: 200%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: .5rem;
+    animation: 
+      text-clip 1s cubic-bezier(0.5, 0, 0.1, 1) both,
+      background-pan 5s linear infinite;
+}
+
+.description {
+    width: 65%;
+    z-index: 3;
+    opacity: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    animation: tie-slide-in-right .4s .3s forwards;
+}
+
+.triangle {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    &__first {
+        bottom: 130px;
+        left: 650px;
+        border-left: 70px solid transparent;
+        border-right: 70px solid transparent;
+        border-bottom: 130px solid rgb(22, 208, 22);
+        animation: down .4s forwards .5s;
+    }
+    &__second {
+        right: 100px;
+        top: 300px;
+        border-left: 200px solid transparent;
+        border-right: 200px solid transparent;
+        border-top: 350px solid red;
+        animation: up .4s forwards .3s;
+    }
+    &__third {
+        top: -150px;
+        border-top: 300px solid transparent;
+        border-left: 500px solid blue;
+        border-bottom: 300px solid transparent;
+        animation: left .4s forwards;
+    }
+}
+
+.hero-image {
+    position: absolute;
+    right: 6rem;
+    top: 2rem;
+    width: 25rem;
+    z-index: 2;
+    height: auto;
+    opacity: 0;
+    animation: tie-slide-in-left .4s forwards .6s;
+  }
+
+@keyframes up {
+    from {
+        transform: translate3d(0, 100px, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: .3;
+    }
+}
+  
+@keyframes left {
+    from {
+        transform: translate3d(100px, 0, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: .3;
+    }
+}
+  
+@keyframes down {
+    from {
+        transform: translate3d(0, -100px, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: .3;
+    }
+}

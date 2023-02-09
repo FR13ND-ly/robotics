@@ -1,0 +1,7 @@
+<div class="timeline" [style.transform]="'translateX(' + selectedIndex * -500 + 'px)'">
+    <section class="key" *ngFor="let key of keyframes; let i = index; let last = last">
+        <div class="title mat-elevation-z2" [class.visible]="i == selectedIndex">{{ key }}</div>
+        <div class="point" [class.point--selected]="i == selectedIndex" (click)="onSelect(i)"></div>
+        <div class="line" *ngIf="!last" (click)="onSelectLine(i)"></div>
+    </section>
+</div>

@@ -1,0 +1,72 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .5;
+    background-image: radial-gradient(#000 1px, #fff 1px);
+    background-size: 10px 10px;
+    &--right {
+        @extend .pattern;
+        animation: bg-animation 25s linear infinite;
+    }
+    &--left {
+        @extend .pattern;
+        animation: bg-animation 25s linear infinite reverse;
+    }
+}
+
+.feature {
+    display: flex;
+    height: 100vh;
+    width: auto;
+    z-index: 1;
+}
+
+.menu {
+    display: flex;
+    width: auto;
+    box-sizing: border-box;
+    padding: 1rem;
+    justify-content: space-between;
+    gap: 1rem;
+    opacity: .8;
+    z-index: 2;
+    span {
+        cursor: pointer;
+        border-radius: 100vmax;
+        width: 100%;
+        background-color: #ccc;
+        text-align: center;
+        padding: .2rem;
+        transition: .2s;
+        &:hover {
+            background-color: #666;
+        }
+    }
+}
+
+.menu span.selected {
+    background-color: brown;
+    color: #fff;
+    &:hover {
+        background-color: rgb(140, 43, 43);
+    }
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}

@@ -1,0 +1,139 @@
+@use "@angular/material" as mat;
+@include mat.core();
+
+$robotics-primary: mat.define-palette(mat.$indigo-palette);
+$robotics-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $robotics-primary,
+      accent: $robotics-accent,
+    ),
+  )
+);
+
+$dark-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $robotics-primary,
+      accent: $robotics-accent,
+    ),
+  )
+);
+
+@include mat.all-component-themes($light-theme);
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+@keyframes text-clip {
+  from {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes tie-slide-in-up {
+  from {
+    transform: translate3d(0, 50px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes tie-slide-in-left {
+  from {
+    transform: translate3d(50px, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes tie-slide-in-right {
+  from {
+    transform: translate3d(-50px, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  
+  to {
+    background-position: -200% center;
+  }
+}
+
+
+code {
+  background: -webkit-linear-gradient(45deg, purple, orange);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  animation: opacity 1s cubic-bezier(0, 0, 0.2, 1) forwards .8s;
+}
+
+.mark {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    background: yellow;
+    animation: fill 1s cubic-bezier(0, 0, 0.2, 1) forwards .2s;
+  }
+}
+
+.underline {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0%;
+    height: 6px;
+    border-radius: 50vmax;
+    z-index: -1;
+    background: teal;
+    animation: fill 1s cubic-bezier(0, 0, 0.2, 1) forwards .5s;
+  }
+}
+
+@keyframes opacity {
+  to { opacity: 1;}
+}
+
+@keyframes fill {
+  to {
+    width: 100%;
+  }
+}

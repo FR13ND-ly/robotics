@@ -1,0 +1,73 @@
+.timeline {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: fit-content;
+    margin-left: 600px;
+    transition: .2s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.point {
+    width: 30px;
+    height: 30px;
+    background-color: teal;
+    border-radius: 50%;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin: 0 10px;
+    transition: .2s;
+    opacity: .8;
+    &:hover {
+        transform: scale(1.4);
+        opacity: 1;
+    }
+    &--selected {
+        background-color: transparent;
+        border: 7px solid teal;
+        transform: scale(1.2);
+    }
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    position: relative;
+    cursor: pointer;
+    height: 50px;
+    &::after {
+        content: '';
+        position: absolute;
+        height: 4px;
+        background-color: teal;
+        border-radius: 100vmax;
+        width: 100%;
+    }
+}
+
+.key {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    position: absolute;
+    background: rgba(0, 128, 128, .25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color: teal;
+    padding: .8rem;
+    border-radius: 20px;
+    box-sizing: border-box;
+    top: -50px;
+    opacity: 0;
+    white-space: nowrap;
+    transition: .5s;
+}
+
+.visible {
+    opacity: 1;
+}

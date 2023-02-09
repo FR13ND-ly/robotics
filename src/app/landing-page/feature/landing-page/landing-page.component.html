@@ -1,0 +1,13 @@
+<ng-container *ngIf="{ selectedSlide : $selectedSlide | async } as vs">
+    <div [class.pattern--right]="right" [class.pattern--left]="!right"></div>
+    <div class="feature" routerLink="/drf" [ngSwitch]="vs.selectedSlide" ngSwipe (swipeEnd)="onSwipeEnd($event)">
+        <app-drf *ngSwitchCase="0"></app-drf>
+        <app-drivetrain *ngSwitchCase="1"></app-drivetrain>
+        <app-intake *ngSwitchCase="2"></app-intake>
+    </div>
+    <div class="menu">
+        <span [class.selected]="vs.selectedSlide == 0" (click)="$selectedSlide.next(0)"></span>
+        <span [class.selected]="vs.selectedSlide == 1" (click)="$selectedSlide.next(1)"></span>
+        <span [class.selected]="vs.selectedSlide == 2" (click)="$selectedSlide.next(2)"></span>
+    </div>
+</ng-container>
