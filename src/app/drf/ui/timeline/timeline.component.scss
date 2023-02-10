@@ -10,7 +10,7 @@
 .point {
     width: 30px;
     height: 30px;
-    background-color: teal;
+    background-color: #26ACE0;
     border-radius: 50%;
     cursor: pointer;
     box-sizing: border-box;
@@ -23,7 +23,7 @@
     }
     &--selected {
         background-color: transparent;
-        border: 7px solid teal;
+        border: 7px solid #26ACE0;
         transform: scale(1.2);
     }
 }
@@ -39,7 +39,7 @@
         content: '';
         position: absolute;
         height: 4px;
-        background-color: teal;
+        background-color: #539AFF;
         border-radius: 100vmax;
         width: 100%;
     }
@@ -52,15 +52,16 @@
 
 .title {
     position: absolute;
-    background: rgba(0, 128, 128, .25);
+    background: hsla(215, 74%, 38%, .5);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    color: teal;
+    color: #539AFF;
     padding: .8rem;
     border-radius: 20px;
+    font-weight: bold;
     box-sizing: border-box;
     top: -50px;
     opacity: 0;

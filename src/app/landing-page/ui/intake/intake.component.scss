@@ -15,29 +15,33 @@
 }
 
 .title {
-    margin-top: 4.2rem;
+    margin-top: 0rem;
     font-size: 8rem;
     z-index: 2;
     font-family: 'Bebas Neue', cursive;
     font-weight: bold;
     background: linear-gradient(
-        to right,
-        teal,
-        rgb(24, 90, 189),
-        teal
+        45deg,
+        #539AFF,
+        #26ACE0,
+        #36F7F4,
+        #26E0A1,
+        #2AF870,
+        #539AFF
     );
     background-size: 200%;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
     animation: 
-      text-clip 1s cubic-bezier(0.5, 0, 0.1, 1) both,
-      background-pan 5s linear infinite;
+        text-clip 1s cubic-bezier(0.5, 0, 0.1, 1) both,
+        background-pan 5s linear infinite reverse;
 }
 
 .description {
     width: 65%;
     z-index: 3;
+    font-weight: bold;
     opacity: 0;
     font-size: 1rem;
     line-height: 1.6;
@@ -55,7 +59,7 @@
         left: 650px;
         border-left: 70px solid transparent;
         border-right: 70px solid transparent;
-        border-bottom: 130px solid rgb(22, 208, 22);
+        border-bottom: 130px solid #66bb6a;
         animation: down .4s forwards .5s;
     }
     &__second {
@@ -63,13 +67,13 @@
         top: 300px;
         border-left: 200px solid transparent;
         border-right: 200px solid transparent;
-        border-top: 350px solid red;
+        border-top: 350px solid #00bcd4;
         animation: up .4s forwards .3s;
     }
     &__third {
         top: -150px;
         border-top: 300px solid transparent;
-        border-left: 500px solid blue;
+        border-left: 500px solid #00bcd4;
         border-bottom: 300px solid transparent;
         animation: left .4s forwards;
     }
@@ -77,12 +81,13 @@
 
 .hero-image {
     position: absolute;
-    right: 6rem;
+    right: 5rem;
     top: 2rem;
     width: 25rem;
     z-index: 2;
     height: auto;
     opacity: 0;
+    filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
     animation: tie-slide-in-left .4s forwards .6s;
   }
 

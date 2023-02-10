@@ -3,6 +3,7 @@
   flex-direction: column;
   box-sizing: border-box;
   padding: 5rem;
+  padding-bottom: 0;
   width: auto;
   height: 100%;
 }
@@ -10,14 +11,17 @@
 .title {
   margin-top: 0rem;
   font-size: 8rem;
-  z-index: 5;
+  z-index: 2;
   font-family: 'Bebas Neue', cursive;
   font-weight: bold;
   background: linear-gradient(
-    to right,
-    teal,
-    rgb(24, 90, 189),
-    teal
+      45deg,
+      #539AFF,
+      #26ACE0,
+      #36F7F4,
+      #26E0A1,
+      #2AF870,
+      #539AFF
   );
   background-size: 200%;
   background-clip: text;
@@ -25,10 +29,11 @@
   margin-bottom: 1rem;
   animation: 
     text-clip 1s cubic-bezier(0.5, 0, 0.1, 1) both,
-    background-pan 2s linear infinite;
+    background-pan 5s linear infinite reverse;
 }
 
 .description {
+  font-weight: bold;
   z-index: 2;
   width: 62%;
   opacity: 0;
@@ -47,23 +52,23 @@
   &--first {
     width: 700px;
     height: 700px;
-    background-color: blue;
     top: -200px;
     right: -200px;
+    background-image: linear-gradient(45deg, #66bb6a, #00bcd4);
   }
   &--second {
     width: 300px;
     height: 300px;
-    background-color: red;
     left: 500px;
+    background-image: linear-gradient(to top, #66bb6a, #00bcd4);
     bottom: -30px;
     animation-delay: .3s;
   }
   &--third {
     width: 100px;
     height: 100px;
-    background-color: purple;
     top: 150px;
+    background-image: linear-gradient(120deg, #66bb6a, #00bcd4);
     left: 200px;
     animation-delay: .5s;
   }
@@ -71,10 +76,11 @@
 
 .hero-image {
   position: absolute;
-  right: 2rem;
-  top: 15rem;
+  right: 5rem;
+  top: 10rem;
   width: 25rem;
   height: auto;
+  filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
   animation: tie-slide-in-left .4s forwards;
 }
 

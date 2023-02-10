@@ -1,6 +1,7 @@
 :host {
     display: flex;
     gap: .5rem;
+    z-index: 2;
 }
 
 .panel {
@@ -11,8 +12,8 @@
     font-weight: bold;
     border: 1px solid transparent;
     user-select: none;
-    background-color: hsl(180, 100%, 25%, 50%);
-    color: hsl(180, 100%, 10%);
+    background-color: #539AFF;
+    color: #162863;
     opacity: 0;
     animation: tie-slide-in-right .4s .3s forwards;
 }

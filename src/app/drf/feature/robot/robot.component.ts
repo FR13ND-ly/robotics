@@ -11,7 +11,6 @@ export class RobotComponent {
   constructor(private dracoLoader: DRACOLoaderService) {
     this.dracoLoader.setDecoderPath('https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/jsm/libs/draco/gltf/');
   }
-
-  @Input()
-  modelUrl : string = "/assets/drone.glb"
+  
+  modelUrl : string = "/assets/dr4b/model.glb"
 }

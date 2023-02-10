@@ -10,8 +10,6 @@ export class DrfComponent implements OnInit {
   
   interval$ : any
 
-  title = "double ReVerse fourbAR"
-  letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   
   ngOnInit() {
     // let iteration = 0;

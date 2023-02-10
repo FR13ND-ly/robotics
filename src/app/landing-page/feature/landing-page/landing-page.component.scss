@@ -11,9 +11,8 @@
     z-index: 0;
     height: 100%;
     width: 100%;
-    opacity: .5;
-    background-image: radial-gradient(#000 1px, #fff 1px);
-    background-size: 10px 10px;
+    background-image: radial-gradient(rgb(32, 79, 149) .65px, #042940 1px);
+    background-size: 20px 20px;
     &--right {
         @extend .pattern;
         animation: bg-animation 25s linear infinite;
@@ -44,21 +43,22 @@
         cursor: pointer;
         border-radius: 100vmax;
         width: 100%;
-        background-color: #ccc;
+        background-color: #cccccc4f;
         text-align: center;
         padding: .2rem;
         transition: .2s;
         &:hover {
-            background-color: #666;
+            background-color: #ccc;
         }
     }
 }
 
 .menu span.selected {
-    background-color: brown;
+    background-color: #69a1ce;
     color: #fff;
+    width: 120%;
     &:hover {
-        background-color: rgb(140, 43, 43);
+        background-color: #00b8d4;
     }
 }
 

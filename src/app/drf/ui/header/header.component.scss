@@ -15,13 +15,8 @@ header {
     font-weight: bold;
     border: 1px solid transparent;
     user-select: none;
-    color: hsl(180, 100%, 20%);
-    background-color: hsl(180, 100%, 25%, 10%);
-    &--active {
-        @extend .link;
-        background-color: hsl(180, 100%, 25%, 50%);
-        color: hsl(180, 100%, 10%);
-    }
+    background-color: hsla(215, 74%, 38%, .5);
+    color: #539AFF;
     &:active {
         border: 1px solid hsl(180, 100%, 25%, 70%);
     }
@@ -31,7 +26,7 @@ header {
     display: flex;
     justify-content: center;
     vertical-align: middle;
-    color: rgb(0, 71, 71);
+    color: #539AFF;
     font-weight: bold;
     cursor: pointer;
     transition: color .2s;
@@ -40,7 +35,7 @@ header {
         transition: transform .2s cubic-bezier(.2, .9, .3, 1.3);
     }
     &:hover {
-        color: rgb(0, 47, 47);
+        color: #36F7F4;
         mat-icon {
             transform: translateY(-2px) translateX(0px) scale(.9);
         }

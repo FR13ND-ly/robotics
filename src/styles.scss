@@ -35,7 +35,9 @@ body {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+  color: #fff;
   overflow: hidden;
+  background-color: #042940;
 }
 
 @keyframes text-clip {
@@ -90,7 +92,7 @@ body {
 
 
 code {
-  background: -webkit-linear-gradient(45deg, purple, orange);
+  background: #ffeb3b;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
@@ -99,6 +101,7 @@ code {
 
 .mark {
   position: relative;
+  color: #000;
   &::after {
     content: "";
     position: absolute;
@@ -107,7 +110,7 @@ code {
     width: 0%;
     height: 100%;
     z-index: -1;
-    background: yellow;
+    background: #ffeb3b;
     animation: fill 1s cubic-bezier(0, 0, 0.2, 1) forwards .2s;
   }
 }
@@ -123,7 +126,7 @@ code {
     height: 6px;
     border-radius: 50vmax;
     z-index: -1;
-    background: teal;
+    background: #ffeb3b;
     animation: fill 1s cubic-bezier(0, 0, 0.2, 1) forwards .5s;
   }
 }

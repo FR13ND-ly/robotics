@@ -9,7 +9,7 @@ import { SwipeEvent } from 'ng-swipe';
 })
 export class DrfComponent {
 
-  selectedIndex = 0;
+  selectedIndex = 1;
   model = '/assets/dr4b/model.glb';
 
   images = [
@@ -23,13 +23,30 @@ export class DrfComponent {
     This version of the robot was made out of recycled parts from the last season with one main idea: a pivoting arm with two motors`,
     `<h2>Sliders Version - October-November 2022</h2>
     This version brought an L-shaped chassis and misumi sliders with a virtual four bar.
-    <h3 class="pros">Advantages</h3>New claw using surgical tubes and Working virtual bar
-    <h3 class="cons">Disdvantages</h3>Fragile string, Lack of stability and Easy to tangle the string
+    <h3 class="pros">Advantages</h3>
+    <ul>
+      <li>New claw using surgical tubes</li> 
+      <li>Working virtual bar</li>
+    </ul>
+    <h3 class="cons">Disadvantages</h3>
+    <ul>
+      <li>Fragile string</li>
+      <li>Lack of stability</li>
+      <li>Easy to tangle the string</li>
+    </ul>
     `,
     `<h2>Double Reverse 4 Bar Version - December 2022</h2>
     We manufactured a double reverse 4 bar from aluminum bars while keeping the L-shapped chassis. 
-    <h3 class="pros">Advantages</h3>Faster than slidersLinear up/down motion
-    <h3 class="cons">Disdvantages</h3>Uses a lot of space, High part count, Inaccurate for cone stacks
+    <h3 class="pros">Advantages</h3>
+    <ul>
+      <li>Faster than slidersLinear up/down motion</li>
+    </ul>
+    <h3 class="cons">Disadvantages</h3>
+    <ul>
+      <li>Uses a lot of space</li> 
+      <li>High part count</li>
+      <li>Inaccurate for cone stacks</li>
+    </ul>
     `,
     `<h2>Current version</h2>
     The latest iteration of the robot has an aluminum drivetrain with both horizontal 
@@ -37,8 +54,19 @@ export class DrfComponent {
     allows the robot to reach up to a high junction while the horizontal extension 
     helps with picking up cones from further away.  This system allowed the software 
     team to make the autonomy more reliable and automate more of the driver controlled mode.
-    <h3 class="pros">Advantages</h3>Fast and reliable cycle time, Better autonomy, More software automations, retractable odometry
-    <h3 class="cons">Disdvantages</h3>Bigger drivetrain, Cones must be transferred from the first claw to the second one, Risk of cones getting stuck inside the robot`,
+    <h3 class="pros">Advantages</h3>
+    <ul>
+      <li>Fast and reliable cycle time</li>
+      <li>Better autonomy</li>
+      <li>More software automations</li>
+      <li>retractable odometry</li>
+    </ul>
+    <h3 class="cons">Disdvantages</h3>
+    <ul>
+      <li>Bigger drivetrain</li> 
+      <li>Cones must be transferred from the first claw to the second one</li>
+      <li>Risk of cones getting stuck inside the robot</li>
+    </ul>`,
   ];
 
   onSwipeEnd(event: SwipeEvent) {
